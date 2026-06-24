@@ -1,0 +1,11 @@
+| Section                  | Status |
+| ------------------------ | ------ |
+| Navigation + Starfield   | ✅      |
+| Hero                     | ✅      |
+| About Me + Typewriter    | ✅      |
+| Projects + 3D Flip Cards | ✅      |
+| Contact Form + Socials   | ✅      |
+| Sticky Footer            | ✅      |
+| Scroll to Top Button     | ✅      |
+
+

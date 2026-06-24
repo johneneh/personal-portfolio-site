@@ -43,3 +43,17 @@ The back of the card reveals hidden overlay tech specs, live demo links, and rep
 
 kimi you are doing excellently well,you are a genius!
 
+contact :
+add a heading that says 'Get In Touch' 
+immediately after the heading add a brief proffesional message to reach out for colaborations and projects.
+create two grids:
+Contact form with at the left: Name, Email, Message field, Submit button
+Social media links (LinkedIn, GitHub, Twitter, instagram) at the right
+
+footer:
+add the Copyright notice with my name and year
+add the Social media icons
+Keep text small and subtle
+make this section sticky
+
+i need a scroll to top bottom
