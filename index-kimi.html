@@ -1,0 +1,603 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- 1.0.0 Meta & Setup -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style-kimi.css" />
+  </head>
+  <body>
+    <!-- 2.0.0 Cinematic Starfield Background -->
+    <!-- 2.1.0 Container for the starfield animation -->
+    <div class="starfield">
+      <!-- 2.1.1 Individual star layers for parallax depth -->
+      <div class="stars"></div>
+      <div class="stars2"></div>
+      <div class="stars3"></div>
+    </div>
+
+    <!-- 3.0.0 Navigation Bar -->
+    <!-- 3.1.0 Sticky navigation container -->
+    <nav class="navbar">
+      <!-- 3.1.1 Logo placeholder section -->
+      <div class="nav-logo">
+        <!-- 3.1.1.1 Replace src with your actual logo image -->
+        <a href="#home">
+          <img
+            src="./images/mylogo.png"
+            alt="My Logo"
+          />
+        </a>
+      </div>
+
+      <!-- 3.1.2 Navigation links container -->
+      <ul class="nav-links">
+        <!-- 3.1.2.1 Home link with glow effects -->
+        <li><a href="#home" class="nav-item active">Home</a></li>
+        <!-- 3.1.2.2 About link with glow effects -->
+        <li><a href="#about" class="nav-item">About</a></li>
+        <!-- 3.1.2.3 Projects link with glow effects -->
+        <li><a href="#projects" class="nav-item">Projects</a></li>
+        <!-- 3.1.2.4 Contact link with glow effects -->
+        <li><a href="#contact" class="nav-item">Contact</a></li>
+      </ul>
+
+      <!-- 3.1.3 Mobile hamburger menu toggle -->
+      <div class="hamburger">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+    </nav>
+
+    <!-- 4.0.0 Main Content Placeholder -->
+    <!-- 4.1.0 Sections will be added here in future prompts -->
+    <main>
+      <!-- ============================================
+         6.0.0 HERO SECTION
+         ============================================ -->
+
+      <!-- 6.1.0 Hero container - full viewport height -->
+      <section id="home" class="hero-section">
+        <!-- 6.2.0 3-Row Grid Layout -->
+        <div class="hero-grid">
+          <!-- 6.3.0 ROW 1: Profile Image -->
+          <div class="hero-row hero-row-1">
+            <!-- 6.3.1 Profile image container with glow ring -->
+            <div class="profile-image-wrapper">
+              <!-- 6.3.1.1 Replace this src with your actual photo -->
+              <img
+                src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face"
+                alt="John Eneh - Software Developer"
+                class="profile-image"
+              />
+              <!-- 6.3.1.2 Decorative orbit ring around image -->
+              <div class="orbit-ring"></div>
+            </div>
+          </div>
+
+          <!-- 6.4.0 ROW 2: Introduction & Skills -->
+          <div class="hero-row hero-row-2">
+            <!-- 6.4.1 Main headline with gradient text -->
+            <h1 class="hero-headline">JOHN ENEH</h1>
+
+            <!-- 6.4.2 Subheading / tagline -->
+            <p class="hero-tagline">Software Developer & Vibe Engineer</p>
+
+            <!-- 6.4.3 Technical Skills Progress Bars -->
+            <div class="skills-container">
+              <!-- 6.4.3.1 Frontend Skill Block -->
+              <div class="skill-block">
+                <div class="skill-label">Frontend</div>
+                <div class="skill-track">
+                  <div class="skill-fill skill-frontend"></div>
+                </div>
+              </div>
+
+              <!-- 6.4.3.2 Fullstack Core Skill Block -->
+              <div class="skill-block">
+                <div class="skill-label">Fullstack Core</div>
+                <div class="skill-track">
+                  <div class="skill-fill skill-fullstack"></div>
+                </div>
+              </div>
+
+              <!-- 6.4.3.3 AI Prompts Skill Block -->
+              <div class="skill-block">
+                <div class="skill-label">AI Prompts</div>
+                <div class="skill-track">
+                  <div class="skill-fill skill-ai"></div>
+                </div>
+              </div>
+
+              <!-- 6.4.3.4 Vibe Coding Architecture Skill Block -->
+              <div class="skill-block">
+                <div class="skill-label">Vibe Coding Architecture</div>
+                <div class="skill-track">
+                  <div class="skill-fill skill-vibe-arch"></div>
+                </div>
+              </div>
+
+              <!-- 6.4.3.5 Vibe Engineering Skill Block -->
+              <div class="skill-block">
+                <div class="skill-label">Vibe Engineering</div>
+                <div class="skill-track">
+                  <div class="skill-fill skill-vibe-eng"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 6.5.0 ROW 3: CTA Button & 3D Element -->
+          <div class="hero-row hero-row-3">
+            <!-- 6.5.1 Dynamic Resume Button -->
+            <a href="#" class="resume-btn" download>
+              <span class="btn-text">View My Resume</span>
+              <span class="btn-icon">↓</span>
+              <!-- 6.5.1.1 Button glow effect layers -->
+              <div class="btn-glow"></div>
+            </a>
+
+            <!-- 6.5.2 Advanced 3D CSS Element Animation -->
+            <div class="element-3d-container">
+              <!-- 6.5.2.1 3D Cube structure -->
+              <div class="cube-3d">
+                <div class="cube-face cube-front">JS</div>
+                <div class="cube-face cube-back">CSS</div>
+                <div class="cube-face cube-right">HTML</div>
+                <div class="cube-face cube-left">AI</div>
+                <div class="cube-face cube-top">VIBE</div>
+                <div class="cube-face cube-bottom">CODE</div>
+              </div>
+              <!-- 6.5.2.2 Floating particles around cube -->
+              <div class="particle p1"></div>
+              <div class="particle p2"></div>
+              <div class="particle p3"></div>
+              <div class="particle p4"></div>
+              <div class="particle p5"></div>
+              <div class="particle p6"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+          <!-- ============================================
+         8.0.0 ABOUT ME SECTION
+         ============================================ -->
+
+    <!-- 8.1.0 About section container -->
+    <section id="about" class="about-section">
+
+        <!-- 8.2.0 Section heading wrapper -->
+        <div class="about-heading-wrapper">
+            <!-- 8.2.1 Main section title -->
+            <h2 class="about-title">ABOUT ME</h2>
+            <!-- 8.2.2 Decorative underline accent -->
+            <div class="title-underline"></div>
+        </div>
+
+        <!-- 8.3.0 Typewriter effect container -->
+        <div class="typewriter-container">
+            <!-- 8.3.1 Static prefix text -->
+            <span class="typewriter-prefix">I am a </span>
+            <!-- 8.3.2 Animated typewriter text -->
+            <span class="typewriter-text" id="typewriter"></span>
+            <!-- 8.3.3 Blinking cursor -->
+            <span class="typewriter-cursor">|</span>
+        </div>
+
+        <!-- 8.4.0 2-Column Grid Layout -->
+        <div class="about-grid">
+
+            <!-- 8.5.0 LEFT COLUMN: Profile Image -->
+            <div class="about-col about-col-left">
+                <!-- 8.5.1 Image wrapper with hover effects -->
+                <div class="about-image-wrapper">
+                    <!-- 8.5.1.1 Replace src with your actual about photo -->
+                    <img 
+                        src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=500&h=600&fit=crop&crop=face" 
+                        alt="John Eneh - About Photo" 
+                        class="about-image"
+                    >
+                    <!-- 8.5.1.2 Decorative corner accents -->
+                    <div class="corner-accent corner-tl"></div>
+                    <div class="corner-accent corner-tr"></div>
+                    <div class="corner-accent corner-bl"></div>
+                    <div class="corner-accent corner-br"></div>
+                </div>
+            </div>
+
+            <!-- 8.6.0 RIGHT COLUMN: Professional Biography -->
+            <div class="about-col about-col-right">
+                <!-- 8.6.1 Biography card container -->
+                <div class="bio-card">
+                    
+                    <!-- 8.6.2 Bio greeting -->
+                    <p class="bio-greeting">Hello, I'm John Eneh</p>
+                    
+                    <!-- 8.6.3 Bio paragraphs -->
+                    <div class="bio-content">
+                        <p class="bio-paragraph">
+                            I am a passionate software developer with a deep love for crafting elegant, 
+                            efficient, and user-centric digital experiences. My journey in tech began with 
+                            curiosity and has evolved into a relentless pursuit of excellence in every 
+                            line of code I write.
+                        </p>
+                        
+                        <p class="bio-paragraph">
+                            Specializing in modern frontend architectures and fullstack development, 
+                            I thrive at the intersection of design and engineering. I believe in the 
+                            power of <strong>vibe coding</strong> — where intuition meets technical 
+                            precision to build products that not only work flawlessly but feel 
+                            intuitively right.
+                        </p>
+                        
+                        <p class="bio-paragraph">
+                            When I'm not immersed in code, you'll find me exploring AI prompt engineering, 
+                            experimenting with emerging frameworks, or mentoring aspiring developers. 
+                            I am committed to continuous learning and contributing to the open-source 
+                            community that has shaped my growth.
+                        </p>
+                    </div>
+
+                    <!-- 8.6.4 Bio stats row -->
+                    <div class="bio-stats">
+                        <!-- 8.6.4.1 Stat item -->
+                        <div class="stat-item">
+                            <span class="stat-number">3+</span>
+                            <span class="stat-label">Years Experience</span>
+                        </div>
+                        <!-- 8.6.4.2 Stat item -->
+                        <div class="stat-item">
+                            <span class="stat-number">50+</span>
+                            <span class="stat-label">Projects Completed</span>
+                        </div>
+                        <!-- 8.6.4.3 Stat item -->
+                        <div class="stat-item">
+                            <span class="stat-number">20+</span>
+                            <span class="stat-label">Happy Clients</span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+        <!-- ============================================
+        10.0.0 PROJECTS SECTION
+        ============================================ -->
+
+    <!-- 10.1.0 Projects section container -->
+    <section id="projects" class="projects-section">
+
+        <!-- 10.2.0 Section heading wrapper -->
+        <div class="projects-heading-wrapper">
+            <!-- 10.2.1 Main section title -->
+            <h2 class="projects-title">PROJECTS</h2>
+            <!-- 10.2.2 Decorative underline accent -->
+            <div class="projects-underline"></div>
+        </div>
+
+        <!-- 10.3.0 2x2 Project Cards Grid -->
+        <div class="projects-grid">
+
+            <!-- ============================================
+                 10.4.0 PROJECT CARD 1: Clinic Management
+                 ============================================ -->
+
+            <!-- 10.4.1 Card container with 3D flip context -->
+            <div class="project-card">
+                <!-- 10.4.2 Inner wrapper - holds both front and back faces -->
+                <div class="card-inner">
+                    
+                    <!-- 10.4.3 FRONT FACE -->
+                    <div class="card-face card-front">
+                        <!-- 10.4.3.1 Preview cover box with icon -->
+                        <div class="card-cover">
+                            <div class="cover-icon">🏥</div>
+                            <!-- 10.4.3.2 Decorative gradient overlay -->
+                            <div class="cover-gradient"></div>
+                        </div>
+                        <!-- 10.4.3.3 Project title -->
+                        <h3 class="card-title">Clinic Management System</h3>
+                        <!-- 10.4.3.4 Status badge -->
+                        <span class="card-status">Upcoming</span>
+                        <!-- 10.4.3.5 Tech tags -->
+                        <div class="card-tags">
+                            <span class="tag">React</span>
+                            <span class="tag">Node.js</span>
+                            <span class="tag">MongoDB</span>
+                        </div>
+                    </div>
+
+                    <!-- 10.4.4 BACK FACE -->
+                    <div class="card-face card-back">
+                        <!-- 10.4.4.1 Back content wrapper -->
+                        <div class="back-content">
+                            <!-- 10.4.4.2 Project heading -->
+                            <h3 class="back-title">Clinic Management System</h3>
+                            <!-- 10.4.4.3 Project description -->
+                            <p class="back-desc">
+                                A comprehensive health care platform featuring patient registration, 
+                                automated appointment scheduling, and real-time doctor availability.
+                            </p>
+                            <!-- 10.4.4.4 Tech specs list -->
+                            <div class="tech-specs">
+                                <h4 class="specs-heading">Tech Stack</h4>
+                                <ul class="specs-list">
+                                    <li>React + TypeScript</li>
+                                    <li>Node.js / Express</li>
+                                    <li>MongoDB + Redis</li>
+                                    <li>Socket.io Real-time</li>
+                                    <li>JWT Authentication</li>
+                                </ul>
+                            </div>
+                            <!-- 10.4.4.5 Action links -->
+                            <div class="back-links">
+                                <a href="#" class="back-link link-demo">
+                                    <span>🔗</span> Live Demo
+                                </a>
+                                <a href="#" class="back-link link-repo">
+                                    <span>💻</span> Repository
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- ============================================
+                 10.5.0 PROJECT CARD 2: Student Social Hub
+                 ============================================ -->
+
+            <div class="project-card">
+                <div class="card-inner">
+                    
+                    <div class="card-face card-front">
+                        <div class="card-cover">
+                            <div class="cover-icon">🎓</div>
+                            <div class="cover-gradient"></div>
+                        </div>
+                        <h3 class="card-title">Exclusive Student Social Hub</h3>
+                        <span class="card-status">Upcoming</span>
+                        <div class="card-tags">
+                            <span class="tag">Next.js</span>
+                            <span class="tag">Firebase</span>
+                            <span class="tag">Tailwind</span>
+                        </div>
+                    </div>
+
+                    <div class="card-face card-back">
+                        <div class="back-content">
+                            <h3 class="back-title">Student Social Hub</h3>
+                            <p class="back-desc">
+                                A social platform restricted to university students for student-led 
+                                study groups, campus-wide events, and academic collaboration.
+                            </p>
+                            <div class="tech-specs">
+                                <h4 class="specs-heading">Tech Stack</h4>
+                                <ul class="specs-list">
+                                    <li>Next.js 14 App Router</li>
+                                    <li>Firebase Auth + Firestore</li>
+                                    <li>Tailwind CSS</li>
+                                    <li>Real-time Chat (WebRTC)</li>
+                                    <li>Event Calendar API</li>
+                                </ul>
+                            </div>
+                            <div class="back-links">
+                                <a href="#" class="back-link link-demo">
+                                    <span>🔗</span> Live Demo
+                                </a>
+                                <a href="#" class="back-link link-repo">
+                                    <span>💻</span> Repository
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- ============================================
+                 10.6.0 PROJECT CARD 3: Labor Connection App
+                 ============================================ -->
+
+            <div class="project-card">
+                <div class="card-inner">
+                    
+                    <div class="card-face card-front">
+                        <div class="card-cover">
+                            <div class="cover-icon">🔨</div>
+                            <div class="cover-gradient"></div>
+                        </div>
+                        <h3 class="card-title">Labor Connection App</h3>
+                        <span class="card-status">Upcoming</span>
+                        <div class="card-tags">
+                            <span class="tag">React Native</span>
+                            <span class="tag">GraphQL</span>
+                            <span class="tag">PostgreSQL</span>
+                        </div>
+                    </div>
+
+                    <div class="card-face card-back">
+                        <div class="back-content">
+                            <h3 class="back-title">Labor Connection App</h3>
+                            <p class="back-desc">
+                                A professional networking app connecting skilled labourers and 
+                                local contractors with clients seeking verified services.
+                            </p>
+                            <div class="tech-specs">
+                                <h4 class="specs-heading">Tech Stack</h4>
+                                <ul class="specs-list">
+                                    <li>React Native (iOS + Android)</li>
+                                    <li>GraphQL + Apollo</li>
+                                    <li>PostgreSQL + PostGIS</li>
+                                    <li>Geolocation Matching</li>
+                                    <li>Stripe Payments</li>
+                                </ul>
+                            </div>
+                            <div class="back-links">
+                                <a href="#" class="back-link link-demo">
+                                    <span>🔗</span> Live Demo
+                                </a>
+                                <a href="#" class="back-link link-repo">
+                                    <span>💻</span> Repository
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- ============================================
+                 10.7.0 PROJECT CARD 4: Travel Agency Hub
+                 ============================================ -->
+
+            <div class="project-card">
+                <div class="card-inner">
+                    
+                    <div class="card-face card-front">
+                        <div class="card-cover">
+                            <div class="cover-icon">✈️</div>
+                            <div class="cover-gradient"></div>
+                        </div>
+                        <h3 class="card-title">Travel Agency Hub</h3>
+                        <span class="card-status">Upcoming</span>
+                        <div class="card-tags">
+                            <span class="tag">Vue.js</span>
+                            <span class="tag">Django</span>
+                            <span class="tag">AWS</span>
+                        </div>
+                    </div>
+
+                    <div class="card-face card-back">
+                        <div class="back-content">
+                            <h3 class="back-title">Travel Agency Hub</h3>
+                            <p class="back-desc">
+                                A dynamic booking engine for travel packages with integrated 
+                                search filters for destinations, budgets, and real-time availability.
+                            </p>
+                            <div class="tech-specs">
+                                <h4 class="specs-heading">Tech Stack</h4>
+                                <ul class="specs-list">
+                                    <li>Vue.js 3 + Pinia</li>
+                                    <li>Django REST Framework</li>
+                                    <li>AWS S3 + CloudFront</li>
+                                    <li>Elasticsearch Filters</li>
+                                    <li>Booking.com API</li>
+                                </ul>
+                            </div>
+                            <div class="back-links">
+                                <a href="#" class="back-link link-demo">
+                                    <span>🔗</span> Live Demo
+                                </a>
+                                <a href="#" class="back-link link-repo">
+                                    <span>💻</span> Repository
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+    </main>
+
+        <!-- 5.0.0 Scripts -->
+    <script>
+        /* ============================================
+           5.1.0 Mobile Navigation Toggle
+           ============================================ */
+        const hamburger = document.querySelector('.hamburger');
+        const navLinks = document.querySelector('.nav-links');
+
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            hamburger.classList.toggle('active');
+        });
+
+        // 5.1.1 Add active class to current nav link on click
+        const navItems = document.querySelectorAll('.nav-item');
+        navItems.forEach(item => {
+            item.addEventListener('click', function() {
+                navItems.forEach(link => link.classList.remove('active'));
+                this.classList.add('active');
+                // 5.1.2 Close mobile menu on link click
+                navLinks.classList.remove('active');
+                hamburger.classList.remove('active');
+            });
+        });
+
+        /* ============================================
+           5.2.0 Typewriter Effect for About Section
+           ============================================ */
+        
+        // 5.2.1 Array of titles to type out
+        const titles = [
+            "Software Developer",
+            "Fullstack Engineer", 
+            "Vibe Coder",
+            "AI Prompt Engineer",
+            "Frontend Architect",
+            "Open Source Contributor"
+        ];
+        
+        // 5.2.2 Typewriter state variables
+        let titleIndex = 0;        // 5.2.2.1 Current title in array
+        let charIndex = 0;         // 5.2.2.2 Current character position
+        let isDeleting = false;    // 5.2.2.3 Are we deleting or typing?
+        let typeSpeed = 100;       // 5.2.2.4 Base typing speed in ms
+        
+        const typewriterElement = document.getElementById('typewriter');
+        
+        // 5.2.3 Main typewriter function
+        function typeWriter() {
+            const currentTitle = titles[titleIndex];
+            
+            // 5.2.3.1 Determine typing speed based on action
+            if (isDeleting) {
+                typeSpeed = 50; // 5.2.3.2 Faster when deleting
+            } else {
+                typeSpeed = 100; // 5.2.3.3 Normal speed when typing
+            }
+            
+            // 5.2.3.4 Update displayed text
+            if (isDeleting) {
+                typewriterElement.textContent = currentTitle.substring(0, charIndex - 1);
+                charIndex--;
+            } else {
+                typewriterElement.textContent = currentTitle.substring(0, charIndex + 1);
+                charIndex++;
+            }
+            
+            // 5.2.3.5 Check if word is complete
+            if (!isDeleting && charIndex === currentTitle.length) {
+                // 5.2.3.6 Pause at end of word before deleting
+                typeSpeed = 2000;
+                isDeleting = true;
+            } 
+            // 5.2.3.7 Check if word is fully deleted
+            else if (isDeleting && charIndex === 0) {
+                isDeleting = false;
+                titleIndex = (titleIndex + 1) % titles.length; // 5.2.3.8 Loop through titles
+                typeSpeed = 500; // 5.2.3.9 Pause before typing next word
+            }
+            
+            // 5.2.3.10 Schedule next iteration
+            setTimeout(typeWriter, typeSpeed);
+        }
+        
+        // 5.2.4 Start typewriter when page loads
+        document.addEventListener('DOMContentLoaded', typeWriter);
+    </script>
+  </body>
+</html>

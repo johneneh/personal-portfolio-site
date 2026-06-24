@@ -1,0 +1,2278 @@
+/* ============================================
+   0.0.0 CSS RESET & BASE STYLES
+   ============================================ */
+
+/* 0.1.0 Universal reset - removes default browser margins/padding */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* 0.2.0 Root variables - centralized color palette and values */
+:root {
+  /* 0.2.1 Primary brand colors */
+  --primary-glow: #00d4ff;
+  --secondary-glow: #7b2cbf;
+  --accent-glow: #ff006e;
+
+  /* 0.2.2 Background colors */
+  --bg-dark: #0a0a0a;
+  --bg-nav: rgba(10, 10, 10, 0.85);
+
+  /* 0.2.3 Text colors */
+  --text-primary: #ffffff;
+  --text-muted: #b0b0b0;
+
+  /* 0.2.4 Animation timing */
+  --transition-fast: 0.3s ease;
+  --transition-smooth: 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* 0.3.0 Body base styles */
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--bg-dark);
+  color: var(--text-primary);
+  overflow-x: hidden;
+  min-height: 100vh;
+}
+
+/* ============================================
+   1.0.0 CINEMATIC STARFIELD BACKGROUND
+   ============================================ */
+
+/* 1.1.0 Starfield container - fixed behind all content */
+.starfield {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; /* 1.1.1 Sends background behind all other elements */
+  background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
+  overflow: hidden;
+}
+
+/* 1.2.0 Star layer base styles */
+.stars,
+.stars2,
+.stars3 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+}
+
+/* 1.3.0 First star layer - smallest, fastest, most numerous */
+.stars {
+  width: 1px;
+  height: 1px;
+  background: transparent;
+  /* 1.3.1 Box-shadow creates hundreds of tiny white dots (stars) */
+  box-shadow:
+    100px 200px #fff,
+    400px 50px #fff,
+    700px 300px #fff,
+    900px 100px #fff,
+    1200px 400px #fff,
+    150px 600px #fff,
+    500px 700px #fff,
+    800px 150px #fff,
+    1100px 500px #fff,
+    300px 800px #fff,
+    600px 250px #fff,
+    950px 650px #fff,
+    1300px 200px #fff,
+    200px 450px #fff,
+    450px 550px #fff,
+    750px 350px #fff,
+    1050px 750px #fff,
+    1400px 300px #fff,
+    50px 350px #fff,
+    350px 150px #fff,
+    650px 450px #fff,
+    850px 250px #fff,
+    1150px 550px #fff,
+    1450px 150px #fff,
+    250px 750px #fff,
+    550px 50px #fff,
+    850px 650px #fff,
+    1250px 350px #fff,
+    1550px 450px #fff,
+    1750px 250px #fff,
+    150px 150px #fff,
+    450px 350px #fff,
+    750px 550px #fff,
+    950px 50px #fff,
+    1250px 250px #fff,
+    1550px 650px #fff,
+    1850px 350px #fff,
+    200px 550px #fff,
+    500px 750px #fff,
+    800px 450px #fff,
+    1000px 150px #fff,
+    1300px 550px #fff,
+    1600px 250px #fff,
+    1900px 450px #fff,
+    2200px 150px #fff,
+    100px 400px #fff,
+    300px 100px #fff,
+    600px 300px #fff,
+    900px 500px #fff,
+    1200px 200px #fff,
+    1500px 400px #fff,
+    1800px 100px #fff,
+    2100px 300px #fff,
+    2400px 500px #fff,
+    50px 650px #fff,
+    250px 850px #fff,
+    550px 950px #fff,
+    850px 850px #fff,
+    1150px 950px #fff,
+    1450px 750px #fff,
+    1750px 850px #fff,
+    2050px 950px #fff,
+    2350px 750px #fff,
+    150px 300px #fff,
+    350px 500px #fff,
+    650px 200px #fff,
+    950px 400px #fff,
+    1250px 100px #fff,
+    1550px 300px #fff,
+    1850px 500px #fff,
+    2150px 200px #fff,
+    2450px 400px #fff;
+  /* 1.3.2 Animation: stars move upward slowly to simulate space travel */
+  animation: animStar 50s linear infinite;
+}
+
+/* 1.4.0 Second star layer - medium size, medium speed */
+.stars2 {
+  width: 2px;
+  height: 2px;
+  background: transparent;
+  box-shadow:
+    200px 100px #fff,
+    500px 300px #fff,
+    800px 200px #fff,
+    1100px 400px #fff,
+    1400px 100px #fff,
+    100px 500px #fff,
+    400px 700px #fff,
+    700px 600px #fff,
+    1000px 800px #fff,
+    1300px 300px #fff,
+    1600px 500px #fff,
+    300px 200px #fff,
+    600px 400px #fff,
+    900px 100px #fff,
+    1200px 600px #fff,
+    1500px 200px #fff,
+    1800px 400px #fff,
+    200px 800px #fff,
+    500px 100px #fff,
+    800px 300px #fff,
+    1100px 500px #fff,
+    1400px 700px #fff,
+    1700px 200px #fff,
+    250px 400px #fff,
+    550px 600px #fff,
+    850px 800px #fff,
+    1150px 100px #fff,
+    1450px 300px #fff,
+    1750px 500px #fff,
+    2050px 700px #fff,
+    350px 150px #fff,
+    650px 350px #fff,
+    950px 550px #fff,
+    1250px 750px #fff,
+    1550px 150px #fff,
+    1850px 350px #fff,
+    2150px 550px #fff,
+    2450px 750px #fff,
+    450px 850px #fff,
+    750px 250px #fff,
+    1050px 450px #fff,
+    1350px 650px #fff,
+    1650px 850px #fff,
+    1950px 150px #fff,
+    2250px 350px #fff;
+  animation: animStar 100s linear infinite;
+}
+
+/* 1.5.0 Third star layer - largest, slowest, creates depth */
+.stars3 {
+  width: 3px;
+  height: 3px;
+  background: transparent;
+  box-shadow:
+    300px 150px #fff,
+    600px 350px #fff,
+    900px 250px #fff,
+    1200px 450px #fff,
+    1500px 150px #fff,
+    200px 550px #fff,
+    500px 750px #fff,
+    800px 650px #fff,
+    1100px 850px #fff,
+    1400px 350px #fff,
+    1700px 550px #fff,
+    400px 250px #fff,
+    700px 450px #fff,
+    1000px 150px #fff,
+    1300px 650px #fff,
+    1600px 250px #fff,
+    1900px 450px #fff,
+    300px 850px #fff,
+    600px 150px #fff,
+    900px 350px #fff,
+    1200px 550px #fff,
+    1500px 750px #fff,
+    1800px 250px #fff,
+    450px 400px #fff,
+    750px 600px #fff,
+    1050px 800px #fff,
+    1350px 200px #fff,
+    1650px 400px #fff,
+    1950px 600px #fff,
+    2250px 800px #fff,
+    550px 300px #fff,
+    850px 500px #fff,
+    1150px 700px #fff,
+    1450px 100px #fff,
+    1750px 300px #fff,
+    2050px 500px #fff,
+    2350px 700px #fff,
+    650px 900px #fff,
+    950px 100px #fff,
+    1250px 300px #fff,
+    1550px 500px #fff,
+    1850px 700px #fff,
+    2150px 900px #fff,
+    2450px 100px #fff,
+    350px 600px #fff,
+    650px 800px #fff,
+    950px 200px #fff,
+    1250px 400px #fff,
+    1550px 600px #fff,
+    1850px 800px #fff,
+    2150px 200px #fff;
+  animation: animStar 150s linear infinite;
+}
+
+/* 1.6.0 Starfield animation keyframes */
+@keyframes animStar {
+  from {
+    transform: translateY(0px);
+  }
+  to {
+    transform: translateY(-2000px);
+  }
+}
+
+/* ============================================
+   2.0.0 NAVIGATION BAR STYLES
+   ============================================ */
+
+/* 2.1.0 Main navbar container - sticky positioning */
+.navbar {
+  position: sticky; /* 2.1.1 Sticks to top when scrolling */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 80px;
+  z-index: 1000; /* 2.1.2 Ensures nav stays above all content */
+
+  /* 2.1.3 Glassmorphism effect - frosted glass look */
+  background: var(--bg-nav);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+
+  /* 2.1.4 Flexbox layout - logo left, links right */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 5%;
+
+  /* 2.1.5 Smooth transition for background changes */
+  transition: all var(--transition-smooth);
+}
+
+/* 2.2.0 Logo section styles */
+.nav-logo {
+  display: flex;
+  align-items: center;
+}
+
+/* 2.2.1 Logo image styling */
+.nav-logo img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%; /* 2.2.1.1 Circular logo */
+  object-fit: cover;
+  border: 2px solid transparent;
+  transition: all var(--transition-fast);
+}
+
+/* 2.2.2 Logo hover glow effect */
+.nav-logo img:hover {
+  border-color: var(--primary-glow);
+  box-shadow:
+    0 0 10px var(--primary-glow),
+    0 0 20px var(--primary-glow),
+    0 0 40px var(--primary-glow);
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+/* 2.3.0 Navigation links container */
+.nav-links {
+  display: flex;
+  list-style: none; /* 2.3.1 Removes default bullet points */
+  gap: 2.5rem; /* 2.3.2 Space between nav items */
+  align-items: center;
+}
+
+/* 2.4.0 Individual navigation item styles */
+.nav-item {
+  position: relative;
+  text-decoration: none; /* 2.4.1 Removes underline */
+  color: var(--text-muted);
+  font-size: 1rem;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-transform: uppercase; /* 2.4.2 Professional uppercase look */
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  transition: all var(--transition-fast);
+
+  /* 2.4.3 Prevents text selection for better UX */
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* 2.5.0 HOVER STATE - Glowing hover effect */
+.nav-item:hover {
+  color: var(--text-primary);
+  background: rgba(0, 212, 255, 0.1); /* 2.5.1 Subtle cyan tint */
+  text-shadow:
+    0 0 5px var(--primary-glow),
+    0 0 10px var(--primary-glow),
+    0 0 20px var(--primary-glow);
+  box-shadow:
+    0 0 5px rgba(0, 212, 255, 0.3),
+    0 0 10px rgba(0, 212, 255, 0.2),
+    inset 0 0 5px rgba(0, 212, 255, 0.1);
+  transform: translateY(-2px); /* 2.5.2 Slight lift effect */
+}
+
+/* 2.6.0 FOCUS STATE - Accessibility glow for keyboard navigation */
+.nav-item:focus {
+  outline: none; /* 2.6.1 Removes default browser outline */
+  color: var(--text-primary);
+  background: rgba(123, 44, 191, 0.15); /* 2.6.2 Purple tint for focus */
+  text-shadow:
+    0 0 5px var(--secondary-glow),
+    0 0 10px var(--secondary-glow),
+    0 0 20px var(--secondary-glow);
+  box-shadow:
+    0 0 5px rgba(123, 44, 191, 0.4),
+    0 0 15px rgba(123, 44, 191, 0.3),
+    inset 0 0 8px rgba(123, 44, 191, 0.2);
+  border-radius: 8px;
+}
+
+/* 2.7.0 ACTIVE STATE - Current page indicator */
+.nav-item.active {
+  color: var(--text-primary);
+  background: rgba(0, 212, 255, 0.15);
+  text-shadow:
+    0 0 5px var(--primary-glow),
+    0 0 10px var(--primary-glow),
+    0 0 20px var(--primary-glow),
+    0 0 40px var(--primary-glow);
+  box-shadow:
+    0 0 10px rgba(0, 212, 255, 0.4),
+    0 0 20px rgba(0, 212, 255, 0.3),
+    inset 0 0 10px rgba(0, 212, 255, 0.2);
+  border: 1px solid rgba(0, 212, 255, 0.3);
+}
+
+/* 2.8.0 Underline animation on hover */
+.nav-item::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(
+    90deg,
+    var(--primary-glow),
+    var(--secondary-glow)
+  );
+  transition: all var(--transition-fast);
+  transform: translateX(-50%);
+}
+
+/* 2.8.1 Expand underline on hover */
+.nav-item:hover::after {
+  width: 80%;
+  box-shadow: 0 0 10px var(--primary-glow);
+}
+
+/* ============================================
+   3.0.0 MOBILE RESPONSIVE STYLES
+   ============================================ */
+
+/* 3.1.0 Tablet breakpoint (768px - 1024px) */
+@media screen and (max-width: 1024px) {
+  /* 3.1.1 Adjust navbar padding for tablets */
+  .navbar {
+    padding: 0 3%;
+  }
+
+  /* 3.1.2 Slightly reduce gap between links */
+  .nav-links {
+    gap: 1.5rem;
+  }
+
+  /* 3.1.3 Adjust font size for tablet */
+  .nav-item {
+    font-size: 0.9rem;
+    padding: 0.4rem 0.8rem;
+  }
+}
+
+/* 3.2.0 Mobile breakpoint (below 768px) */
+@media screen and (max-width: 768px) {
+  /* 3.2.1 Navbar stays same height but adjusts layout */
+  .navbar {
+    padding: 0 5%;
+  }
+
+  /* 3.2.2 Hamburger menu becomes visible */
+  .hamburger {
+    display: flex; /* 3.2.2.1 Flex column for three bars */
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    z-index: 1001;
+  }
+
+  /* 3.2.3 Hamburger bar styling */
+  .hamburger .bar {
+    width: 25px;
+    height: 3px;
+    background: var(--text-primary);
+    border-radius: 3px;
+    transition: all var(--transition-fast);
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+  }
+
+  /* 3.2.4 Hamburger hover glow */
+  .hamburger:hover .bar {
+    background: var(--primary-glow);
+    box-shadow: 0 0 10px var(--primary-glow);
+  }
+
+  /* 3.2.5 Mobile navigation menu - hidden by default */
+  .nav-links {
+    position: fixed;
+    top: 80px; /* 3.2.5.1 Starts below navbar */
+    left: -100%; /* 3.2.5.2 Hidden off-screen to the left */
+    width: 100%;
+    height: calc(100vh - 80px);
+    background: rgba(10, 10, 10, 0.98);
+    backdrop-filter: blur(20px);
+    flex-direction: column; /* 3.2.5.3 Stack links vertically */
+    justify-content: flex-start;
+    align-items: center;
+    padding-top: 3rem;
+    gap: 2rem;
+    transition: left var(--transition-smooth);
+  }
+
+  /* 3.2.6 Active mobile menu - slides in */
+  .nav-links.active {
+    left: 0;
+  }
+
+  /* 3.2.7 Mobile nav item sizing */
+  .nav-item {
+    font-size: 1.2rem;
+    padding: 1rem 2rem;
+    width: 80%;
+    text-align: center;
+  }
+
+  /* 3.2.8 Hamburger animation when menu is open */
+  .hamburger.active .bar:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 6px);
+    background: var(--accent-glow);
+  }
+
+  .hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger.active .bar:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -6px);
+    background: var(--accent-glow);
+  }
+}
+
+/* 3.3.0 Small mobile breakpoint (below 480px) */
+@media screen and (max-width: 480px) {
+  /* 3.3.1 Compact navbar for very small screens */
+  .navbar {
+    height: 70px;
+  }
+
+  /* 3.3.2 Adjust mobile menu top position */
+  .nav-links {
+    top: 70px;
+    height: calc(100vh - 70px);
+  }
+
+  /* 3.3.3 Smaller logo for mobile */
+  .nav-logo img {
+    width: 40px;
+    height: 40px;
+  }
+
+  /* 3.3.4 Smaller nav items */
+  .nav-item {
+    font-size: 1rem;
+    padding: 0.8rem 1.5rem;
+  }
+}
+
+/* ============================================
+   4.0.0 UTILITY & ACCESSIBILITY STYLES
+   ============================================ */
+
+/* 4.1.0 Smooth scrolling for anchor links */
+html {
+  scroll-behavior: smooth;
+}
+
+/* 4.2.0 Selection color customization */
+::selection {
+  background: rgba(0, 212, 255, 0.3);
+  color: var(--text-primary);
+}
+
+/* 4.3.0 Reduced motion preference - accessibility */
+@media (prefers-reduced-motion: reduce) {
+  /* 4.3.1 Disable starfield animation for users who prefer reduced motion */
+  .stars,
+  .stars2,
+  .stars3 {
+    animation: none;
+  }
+
+  /* 4.3.2 Disable transitions */
+  * {
+    transition: none !important;
+    animation-duration: 0.01ms !important;
+  }
+}
+/* ============================================
+   6.0.0 HERO SECTION STYLES
+   ============================================ */
+
+/* 6.1.0 Hero section base - full viewport height */
+.hero-section {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 100px 5% 60px; /* 6.1.1 Top padding accounts for sticky nav */
+  position: relative;
+  z-index: 1;
+}
+
+/* 6.2.0 3-Row Grid Layout Container */
+.hero-grid {
+  display: grid;
+  grid-template-rows: auto auto auto; /* 6.2.1 Three explicit rows */
+  gap: 2rem; /* 6.2.2 Tight spacing between rows */
+  width: 100%;
+  max-width: 900px; /* 6.2.3 Constrain max width for readability */
+  align-items: center;
+  justify-items: center;
+  text-align: center;
+}
+
+/* ============================================
+   6.3.0 ROW 1: PROFILE IMAGE
+   ============================================ */
+
+/* 6.3.0 Row 1 container */
+.hero-row-1 {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 1rem 0;
+}
+
+/* 6.3.1 Profile image wrapper with positioning context */
+.profile-image-wrapper {
+  position: relative;
+  width: 180px;
+  height: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* 6.3.1.1 Profile image styling */
+.profile-image {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid rgba(0, 212, 255, 0.5);
+  box-shadow:
+    0 0 20px rgba(0, 212, 255, 0.3),
+    0 0 40px rgba(0, 212, 255, 0.2),
+    0 0 60px rgba(0, 212, 255, 0.1);
+  position: relative;
+  z-index: 2;
+  transition: all 0.5s ease;
+}
+
+/* 6.3.1.2 Image hover effect */
+.profile-image:hover {
+  transform: scale(1.05);
+  box-shadow:
+    0 0 30px rgba(0, 212, 255, 0.6),
+    0 0 60px rgba(0, 212, 255, 0.4),
+    0 0 90px rgba(0, 212, 255, 0.2);
+}
+
+/* 6.3.1.3 Decorative orbit ring around image */
+.orbit-ring {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 200px;
+  height: 200px;
+  border: 2px dashed rgba(0, 212, 255, 0.3);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  animation: orbitSpin 10s linear infinite;
+  z-index: 1;
+}
+
+/* 6.3.1.4 Orbit ring animation */
+@keyframes orbitSpin {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+/* ============================================
+   6.4.0 ROW 2: INTRODUCTION & SKILLS
+   ============================================ */
+
+/* 6.4.0 Row 2 container */
+.hero-row-2 {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.2rem;
+  padding: 0.5rem 0;
+}
+
+/* 6.4.1 Gradient text headline */
+.hero-headline {
+  font-size: clamp(2.5rem, 8vw, 5rem); /* 6.4.1.1 Responsive fluid typography */
+  font-weight: 800;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+
+  /* 6.4.1.2 Multi-color gradient text effect */
+  background: linear-gradient(
+    135deg,
+    #00d4ff 0%,
+    #7b2cbf 25%,
+    #ff006e 50%,
+    #00d4ff 75%,
+    #7b2cbf 100%
+  );
+  background-size: 300% 300%; /* 6.4.1.3 Large size for animation */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+
+  /* 6.4.1.4 Animated gradient shift */
+  animation: gradientShift 5s ease infinite;
+
+  /* 6.4.1.5 Subtle text shadow for depth */
+  filter: drop-shadow(0 0 20px rgba(0, 212, 255, 0.3));
+}
+
+/* 6.4.1.6 Gradient animation keyframes */
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* 6.4.2 Tagline subheading */
+.hero-tagline {
+  font-size: clamp(1rem, 3vw, 1.4rem);
+  color: var(--text-muted);
+  font-weight: 300;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+}
+
+/* 6.4.3 Skills container - horizontal layout */
+.skills-container {
+  display: flex;
+  flex-wrap: wrap; /* 6.4.3.1 Wrap to prevent truncation */
+  justify-content: center;
+  gap: 1rem;
+  width: 100%;
+  max-width: 800px;
+  padding: 0.5rem;
+}
+
+/* 6.4.3.2 Individual skill block */
+.skill-block {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.4rem;
+  min-width: 140px; /* 6.4.3.3 Minimum width prevents squishing */
+  flex: 1 1 140px; /* 6.4.3.4 Flex grow, shrink, basis */
+  max-width: 200px;
+}
+
+/* 6.4.3.5 Skill label text */
+.skill-label {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 500;
+  white-space: nowrap; /* 6.4.3.6 Prevents label wrapping */
+}
+
+/* 6.4.3.7 Skill track (background bar) */
+.skill-track {
+  width: 100%;
+  height: 6px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 3px;
+  overflow: hidden;
+  position: relative;
+}
+
+/* 6.4.3.8 Skill fill (animated progress) */
+.skill-fill {
+  height: 100%;
+  border-radius: 3px;
+  position: relative;
+  width: 0; /* 6.4.3.9 Starts at 0 for animation */
+  animation: skillFill 2s ease-out forwards;
+}
+
+/* 6.4.3.10 Skill fill shimmer effect */
+.skill-fill::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.4),
+    transparent
+  );
+  animation: shimmer 2s infinite;
+}
+
+/* 6.4.3.11 Individual skill percentages & colors */
+.skill-frontend {
+  background: linear-gradient(90deg, #00d4ff, #0099cc);
+  animation-delay: 0.2s;
+  --target-width: 92%;
+}
+
+.skill-fullstack {
+  background: linear-gradient(90deg, #7b2cbf, #5a1d8f);
+  animation-delay: 0.4s;
+  --target-width: 85%;
+}
+
+.skill-ai {
+  background: linear-gradient(90deg, #ff006e, #cc0058);
+  animation-delay: 0.6s;
+  --target-width: 88%;
+}
+
+.skill-vibe-arch {
+  background: linear-gradient(90deg, #00f5d4, #00b894);
+  animation-delay: 0.8s;
+  --target-width: 90%;
+}
+
+.skill-vibe-eng {
+  background: linear-gradient(90deg, #fee440, #f39c12);
+  animation-delay: 1s;
+  --target-width: 95%;
+}
+
+/* 6.4.3.12 Skill fill animation */
+@keyframes skillFill {
+  to {
+    width: var(--target-width);
+  }
+}
+
+/* 6.4.3.13 Shimmer animation */
+@keyframes shimmer {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+/* ============================================
+   6.5.0 ROW 3: CTA BUTTON & 3D ELEMENT
+   ============================================ */
+
+/* 6.5.0 Row 3 container */
+.hero-row-3 {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+  padding: 1rem 0 2rem;
+}
+
+/* 6.5.1 Dynamic Resume Button */
+.resume-btn {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.8rem;
+  padding: 1rem 2.5rem;
+  background: transparent;
+  color: var(--text-primary);
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  border: 2px solid var(--primary-glow);
+  border-radius: 50px;
+  overflow: hidden;
+  transition: all 0.4s ease;
+  z-index: 1;
+}
+
+/* 6.5.1.1 Button text */
+.btn-text {
+  position: relative;
+  z-index: 2;
+}
+
+/* 6.5.1.2 Button icon */
+.btn-icon {
+  position: relative;
+  z-index: 2;
+  font-size: 1.3rem;
+  transition: transform 0.3s ease;
+}
+
+/* 6.5.1.3 Button hover - icon bounces down */
+.resume-btn:hover .btn-icon {
+  transform: translateY(3px);
+}
+
+/* 6.5.1.4 Button glow layer */
+.btn-glow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    135deg,
+    var(--primary-glow),
+    var(--secondary-glow)
+  );
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  z-index: 0;
+}
+
+/* 6.5.1.5 Button hover effects */
+.resume-btn:hover {
+  border-color: transparent;
+  box-shadow:
+    0 0 20px rgba(0, 212, 255, 0.5),
+    0 0 40px rgba(0, 212, 255, 0.3),
+    0 0 60px rgba(0, 212, 255, 0.2);
+  transform: translateY(-3px);
+}
+
+.resume-btn:hover .btn-glow {
+  opacity: 0.2;
+}
+
+/* 6.5.1.6 Button active/click effect */
+.resume-btn:active {
+  transform: translateY(0) scale(0.98);
+}
+
+/* 6.5.1.7 Button focus glow */
+.resume-btn:focus {
+  outline: none;
+  box-shadow:
+    0 0 20px rgba(0, 212, 255, 0.5),
+    0 0 40px rgba(0, 212, 255, 0.3),
+    inset 0 0 10px rgba(0, 212, 255, 0.2);
+}
+
+/* ============================================
+   6.5.2 ADVANCED 3D CSS ELEMENT
+   ============================================ */
+
+/* 6.5.2.0 3D Container - sets perspective */
+.element-3d-container {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  perspective: 800px; /* 6.5.2.0.1 Depth of 3D space */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* 6.5.2.1 The 3D Cube */
+.cube-3d {
+  width: 80px;
+  height: 80px;
+  position: relative;
+  transform-style: preserve-3d; /* 6.5.2.1.1 Enables 3D transforms on children */
+  animation: cubeRotate 8s infinite linear;
+}
+
+/* 6.5.2.2 Cube faces - common styles */
+.cube-face {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  border: 2px solid rgba(0, 212, 255, 0.6);
+  background: rgba(0, 212, 255, 0.1);
+  backdrop-filter: blur(4px);
+  text-shadow: 0 0 5px var(--primary-glow);
+  box-shadow:
+    0 0 10px rgba(0, 212, 255, 0.3),
+    inset 0 0 10px rgba(0, 212, 255, 0.1);
+}
+
+/* 6.5.2.3 Individual face positions in 3D space */
+.cube-front {
+  transform: rotateY(0deg) translateZ(40px);
+}
+.cube-back {
+  transform: rotateY(180deg) translateZ(40px);
+}
+.cube-right {
+  transform: rotateY(90deg) translateZ(40px);
+}
+.cube-left {
+  transform: rotateY(-90deg) translateZ(40px);
+}
+.cube-top {
+  transform: rotateX(90deg) translateZ(40px);
+}
+.cube-bottom {
+  transform: rotateX(-90deg) translateZ(40px);
+}
+
+/* 6.5.2.4 Cube rotation animation */
+@keyframes cubeRotate {
+  0% {
+    transform: rotateX(0deg) rotateY(0deg);
+  }
+  25% {
+    transform: rotateX(90deg) rotateY(90deg);
+  }
+  50% {
+    transform: rotateX(180deg) rotateY(180deg);
+  }
+  75% {
+    transform: rotateX(270deg) rotateY(270deg);
+  }
+  100% {
+    transform: rotateX(360deg) rotateY(360deg);
+  }
+}
+
+/* 6.5.2.5 Floating particles around cube */
+.particle {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  background: var(--primary-glow);
+  border-radius: 50%;
+  box-shadow: 0 0 6px var(--primary-glow);
+  animation: particleFloat 3s ease-in-out infinite;
+}
+
+/* 6.5.2.6 Particle positions and delays */
+.p1 {
+  top: 0;
+  left: 50%;
+  animation-delay: 0s;
+}
+.p2 {
+  top: 50%;
+  right: 0;
+  animation-delay: 0.5s;
+}
+.p3 {
+  bottom: 0;
+  left: 50%;
+  animation-delay: 1s;
+}
+.p4 {
+  top: 50%;
+  left: 0;
+  animation-delay: 1.5s;
+}
+.p5 {
+  top: 20%;
+  left: 20%;
+  animation-delay: 0.3s;
+}
+.p6 {
+  bottom: 20%;
+  right: 20%;
+  animation-delay: 0.8s;
+}
+
+/* 6.5.2.7 Particle float animation */
+@keyframes particleFloat {
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 0.6;
+  }
+  50% {
+    transform: scale(1.8);
+    opacity: 1;
+    box-shadow:
+      0 0 12px var(--primary-glow),
+      0 0 20px var(--primary-glow);
+  }
+}
+
+/* ============================================
+   7.0.0 HERO RESPONSIVE STYLES
+   ============================================ */
+
+/* 7.1.0 Tablet adjustments (768px - 1024px) */
+@media screen and (max-width: 1024px) {
+  /* 7.1.1 Reduce hero padding */
+  .hero-section {
+    padding: 90px 4% 50px;
+  }
+
+  /* 7.1.2 Adjust profile image */
+  .profile-image-wrapper {
+    width: 160px;
+    height: 160px;
+  }
+
+  .profile-image {
+    width: 140px;
+    height: 140px;
+  }
+
+  .orbit-ring {
+    width: 170px;
+    height: 170px;
+  }
+
+  /* 7.1.3 Tighten skills gap */
+  .skills-container {
+    gap: 0.8rem;
+  }
+
+  /* 7.1.4 Smaller 3D element */
+  .element-3d-container {
+    width: 130px;
+    height: 130px;
+  }
+
+  .cube-3d,
+  .cube-face {
+    width: 70px;
+    height: 70px;
+  }
+
+  .cube-front {
+    transform: rotateY(0deg) translateZ(35px);
+  }
+  .cube-back {
+    transform: rotateY(180deg) translateZ(35px);
+  }
+  .cube-right {
+    transform: rotateY(90deg) translateZ(35px);
+  }
+  .cube-left {
+    transform: rotateY(-90deg) translateZ(35px);
+  }
+  .cube-top {
+    transform: rotateX(90deg) translateZ(35px);
+  }
+  .cube-bottom {
+    transform: rotateX(-90deg) translateZ(35px);
+  }
+}
+
+/* 7.2.0 Mobile adjustments (below 768px) */
+@media screen and (max-width: 768px) {
+  /* 7.2.1 Compact hero section */
+  .hero-section {
+    padding: 80px 5% 40px;
+    min-height: auto;
+  }
+
+  /* 7.2.2 Stack grid rows with less gap */
+  .hero-grid {
+    gap: 1.5rem;
+  }
+
+  /* 7.2.3 Smaller profile image */
+  .profile-image-wrapper {
+    width: 140px;
+    height: 140px;
+  }
+
+  .profile-image {
+    width: 120px;
+    height: 120px;
+  }
+
+  .orbit-ring {
+    width: 150px;
+    height: 150px;
+  }
+
+  /* 7.2.4 Skills stack vertically on mobile */
+  .skills-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.8rem;
+  }
+
+  .skill-block {
+    width: 100%;
+    max-width: 300px;
+    min-width: unset;
+  }
+
+  /* 7.2.5 Smaller button */
+  .resume-btn {
+    padding: 0.8rem 2rem;
+    font-size: 0.95rem;
+  }
+
+  /* 7.2.6 Compact 3D element */
+  .element-3d-container {
+    width: 120px;
+    height: 120px;
+  }
+
+  .cube-3d,
+  .cube-face {
+    width: 60px;
+    height: 60px;
+  }
+
+  .cube-face {
+    font-size: 0.65rem;
+  }
+
+  .cube-front {
+    transform: rotateY(0deg) translateZ(30px);
+  }
+  .cube-back {
+    transform: rotateY(180deg) translateZ(30px);
+  }
+  .cube-right {
+    transform: rotateY(90deg) translateZ(30px);
+  }
+  .cube-left {
+    transform: rotateY(-90deg) translateZ(30px);
+  }
+  .cube-top {
+    transform: rotateX(90deg) translateZ(30px);
+  }
+  .cube-bottom {
+    transform: rotateX(-90deg) translateZ(30px);
+  }
+}
+
+/* 7.3.0 Small mobile adjustments (below 480px) */
+@media screen and (max-width: 480px) {
+  /* 7.3.1 Even tighter layout */
+  .hero-grid {
+    gap: 1.2rem;
+  }
+
+  /* 7.3.2 Compact profile */
+  .profile-image-wrapper {
+    width: 120px;
+    height: 120px;
+  }
+
+  .profile-image {
+    width: 100px;
+    height: 100px;
+  }
+
+  .orbit-ring {
+    width: 130px;
+    height: 130px;
+  }
+
+  /* 7.3.3 Full-width skills */
+  .skill-block {
+    max-width: 100%;
+  }
+
+  /* 7.3.4 Compact 3D cube */
+  .element-3d-container {
+    width: 100px;
+    height: 100px;
+  }
+
+  .cube-3d,
+  .cube-face {
+    width: 50px;
+    height: 50px;
+  }
+
+  .cube-face {
+    font-size: 0.55rem;
+    border-width: 1px;
+  }
+
+  .cube-front {
+    transform: rotateY(0deg) translateZ(25px);
+  }
+  .cube-back {
+    transform: rotateY(180deg) translateZ(25px);
+  }
+  .cube-right {
+    transform: rotateY(90deg) translateZ(25px);
+  }
+  .cube-left {
+    transform: rotateY(-90deg) translateZ(25px);
+  }
+  .cube-top {
+    transform: rotateX(90deg) translateZ(25px);
+  }
+  .cube-bottom {
+    transform: rotateX(-90deg) translateZ(25px);
+  }
+}
+/* ============================================
+   8.0.0 ABOUT ME SECTION STYLES
+   ============================================ */
+
+/* 8.1.0 About section base */
+.about-section {
+    min-height: 100vh;
+    padding: 100px 5% 80px;
+    position: relative;
+    z-index: 1;
+    
+    /* 8.1.1 Subtle gradient that blends with starfield background */
+    background: linear-gradient(
+        180deg,
+        rgba(10, 10, 10, 0.3) 0%,
+        rgba(15, 15, 25, 0.6) 50%,
+        rgba(10, 10, 10, 0.3) 100%
+    );
+}
+
+
+/* ============================================
+   8.2.0 SECTION HEADING
+   ============================================ */
+
+/* 8.2.0 Heading wrapper - centered */
+.about-heading-wrapper {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+/* 8.2.1 Main about title */
+.about-title {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    font-weight: 800;
+    letter-spacing: 6px;
+    text-transform: uppercase;
+    color: var(--text-primary);
+    position: relative;
+    display: inline-block;
+}
+
+/* 8.2.2 Decorative underline */
+.title-underline {
+    width: 80px;
+    height: 4px;
+    margin: 1rem auto 0;
+    background: linear-gradient(90deg, var(--primary-glow), var(--secondary-glow), var(--accent-glow));
+    border-radius: 2px;
+    box-shadow: 0 0 10px var(--primary-glow), 0 0 20px rgba(0, 212, 255, 0.3);
+    animation: underlinePulse 3s ease-in-out infinite;
+}
+
+/* 8.2.3 Underline glow animation */
+@keyframes underlinePulse {
+    0%, 100% { 
+        box-shadow: 0 0 10px var(--primary-glow), 0 0 20px rgba(0, 212, 255, 0.3); 
+    }
+    50% { 
+        box-shadow: 0 0 20px var(--primary-glow), 0 0 40px rgba(0, 212, 255, 0.5), 0 0 60px rgba(0, 212, 255, 0.2); 
+    }
+}
+
+
+/* ============================================
+   8.3.0 TYPEWRITER EFFECT
+   ============================================ */
+
+/* 8.3.0 Typewriter container */
+.typewriter-container {
+    text-align: center;
+    margin-bottom: 3rem;
+    font-size: clamp(1rem, 3vw, 1.5rem);
+    font-weight: 500;
+    min-height: 2rem; /* 8.3.0.1 Prevents layout shift */
+}
+
+/* 8.3.1 Static prefix text */
+.typewriter-prefix {
+    color: var(--text-muted);
+}
+
+/* 8.3.2 Animated typewriter text */
+.typewriter-text {
+    color: var(--primary-glow);
+    text-shadow: 0 0 10px rgba(0, 212, 255, 0.5);
+    font-weight: 600;
+}
+
+/* 8.3.3 Blinking cursor */
+.typewriter-cursor {
+    color: var(--primary-glow);
+    animation: cursorBlink 0.8s step-end infinite;
+    font-weight: 300;
+}
+
+/* 8.3.4 Cursor blink animation */
+@keyframes cursorBlink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+
+/* ============================================
+   8.4.0 2-COLUMN GRID LAYOUT
+   ============================================ */
+
+/* 8.4.0 Grid container */
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* 8.4.1 Equal 2-column split */
+    gap: 4rem; /* 8.4.2 Generous gap between columns */
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
+/* ============================================
+   8.5.0 LEFT COLUMN: PROFILE IMAGE
+   ============================================ */
+
+/* 8.5.0 Left column */
+.about-col-left {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* 8.5.1 Image wrapper with positioning context */
+.about-image-wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+    aspect-ratio: 4 / 5; /* 8.5.1.1 Maintains portrait ratio */
+}
+
+/* 8.5.1.2 Profile image */
+.about-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 12px;
+    position: relative;
+    z-index: 2;
+    transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94); /* 8.5.1.3 Smooth easing */
+}
+
+/* 8.5.1.4 Hover scale effect */
+.about-image-wrapper:hover .about-image {
+    transform: scale(1.08); /* 8.5.1.5 Zoom on hover */
+    box-shadow: 
+        0 20px 40px rgba(0, 0, 0, 0.4),
+        0 0 30px rgba(0, 212, 255, 0.2);
+}
+
+/* 8.5.1.6 Decorative corner accents */
+.corner-accent {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    border: 3px solid var(--primary-glow);
+    z-index: 3;
+    transition: all 0.4s ease;
+    opacity: 0.7;
+}
+
+/* 8.5.1.7 Individual corner positions */
+.corner-tl { 
+    top: -10px; 
+    left: -10px; 
+    border-right: none; 
+    border-bottom: none; 
+    border-radius: 8px 0 0 0;
+}
+.corner-tr { 
+    top: -10px; 
+    right: -10px; 
+    border-left: none; 
+    border-bottom: none; 
+    border-radius: 0 8px 0 0;
+}
+.corner-bl { 
+    bottom: -10px; 
+    left: -10px; 
+    border-right: none; 
+    border-top: none; 
+    border-radius: 0 0 0 8px;
+}
+.corner-br { 
+    bottom: -10px; 
+    right: -10px; 
+    border-left: none; 
+    border-top: none; 
+    border-radius: 0 0 8px 0;
+}
+
+/* 8.5.1.8 Corner accents expand on hover */
+.about-image-wrapper:hover .corner-accent {
+    width: 60px;
+    height: 60px;
+    opacity: 1;
+    box-shadow: 0 0 15px var(--primary-glow);
+}
+
+
+/* ============================================
+   8.6.0 RIGHT COLUMN: BIOGRAPHY
+   ============================================ */
+
+/* 8.6.0 Right column */
+.about-col-right {
+    display: flex;
+    align-items: center;
+}
+
+/* 8.6.1 Bio card container */
+.bio-card {
+    background: rgba(255, 255, 255, 0.03); /* 8.6.1.1 Subtle glass effect */
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 16px;
+    padding: 2.5rem;
+    width: 100%;
+    transition: all 0.4s ease;
+}
+
+/* 8.6.1.2 Bio card hover glow */
+.bio-card:hover {
+    border-color: rgba(0, 212, 255, 0.2);
+    box-shadow: 
+        0 0 30px rgba(0, 212, 255, 0.1),
+        inset 0 0 30px rgba(0, 212, 255, 0.02);
+}
+
+/* 8.6.2 Bio greeting */
+.bio-greeting {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 1.5rem;
+    position: relative;
+    display: inline-block;
+}
+
+/* 8.6.2.1 Greeting accent line */
+.bio-greeting::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+    width: 50px;
+    height: 3px;
+    background: linear-gradient(90deg, var(--primary-glow), transparent);
+    border-radius: 2px;
+}
+
+/* 8.6.3 Bio content paragraphs */
+.bio-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+/* 8.6.3.1 Individual bio paragraph */
+.bio-paragraph {
+    font-size: 1rem;
+    line-height: 1.8;
+    color: var(--text-muted);
+    text-align: justify; /* 8.6.3.2 Clean justified text */
+}
+
+/* 8.6.3.3 Strong text styling within bio */
+.bio-paragraph strong {
+    color: var(--primary-glow);
+    font-weight: 600;
+}
+
+/* 8.6.4 Bio stats row */
+.bio-stats {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* 8.6.4.1 Individual stat item */
+.stat-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    flex: 1;
+}
+
+/* 8.6.4.2 Stat number */
+.stat-number {
+    font-size: 2rem;
+    font-weight: 800;
+    color: var(--primary-glow);
+    text-shadow: 0 0 10px rgba(0, 212, 255, 0.4);
+    line-height: 1;
+}
+
+/* 8.6.4.3 Stat label */
+.stat-label {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: 0.4rem;
+}
+
+
+/* ============================================
+   9.0.0 ABOUT SECTION RESPONSIVE STYLES
+   ============================================ */
+
+/* 9.1.0 Tablet adjustments (768px - 1024px) */
+@media screen and (max-width: 1024px) {
+    
+    /* 9.1.1 Reduce grid gap */
+    .about-grid {
+        gap: 2.5rem;
+    }
+    
+    /* 9.1.2 Smaller bio card padding */
+    .bio-card {
+        padding: 2rem;
+    }
+    
+    /* 9.1.3 Adjust stat numbers */
+    .stat-number {
+        font-size: 1.6rem;
+    }
+}
+
+/* 9.2.0 Mobile adjustments (below 768px) */
+@media screen and (max-width: 768px) {
+    
+    /* 9.2.1 Stack to single column */
+    .about-grid {
+        grid-template-columns: 1fr; /* 9.2.1.1 Single column on mobile */
+        gap: 2.5rem;
+    }
+    
+    /* 9.2.2 Reorder: image on top, bio below */
+    .about-col-left {
+        order: 1;
+    }
+    
+    .about-col-right {
+        order: 2;
+    }
+    
+    /* 9.2.3 Center image on mobile */
+    .about-image-wrapper {
+        max-width: 280px;
+    }
+    
+    /* 9.2.4 Full-width bio card */
+    .bio-card {
+        padding: 1.8rem;
+    }
+    
+    /* 9.2.5 Adjust typewriter size */
+    .typewriter-container {
+        margin-bottom: 2rem;
+    }
+    
+    /* 9.2.6 Compact stats */
+    .bio-stats {
+        gap: 0.5rem;
+    }
+    
+    .stat-number {
+        font-size: 1.4rem;
+    }
+    
+    .stat-label {
+        font-size: 0.7rem;
+    }
+}
+
+/* 9.3.0 Small mobile adjustments (below 480px) */
+@media screen and (max-width: 480px) {
+    
+    /* 9.3.1 Tighter padding */
+    .about-section {
+        padding: 80px 4% 60px;
+    }
+    
+    /* 9.3.2 Smaller image */
+    .about-image-wrapper {
+        max-width: 220px;
+    }
+    
+    /* 9.3.3 Compact bio card */
+    .bio-card {
+        padding: 1.5rem;
+        border-radius: 12px;
+    }
+    
+    /* 9.3.4 Smaller bio text */
+    .bio-paragraph {
+        font-size: 0.9rem;
+        line-height: 1.7;
+    }
+    
+    /* 9.3.5 Stack stats vertically */
+    .bio-stats {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .stat-item {
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+    }
+    
+    .stat-label {
+        margin-top: 0;
+    }
+}
+/* ============================================
+   10.0.0 PROJECTS SECTION STYLES
+   ============================================ */
+
+/* 10.1.0 Projects section base */
+.projects-section {
+    min-height: 100vh;
+    padding: 100px 5% 80px;
+    position: relative;
+    z-index: 1;
+    
+    /* 10.1.1 Blended background with starfield */
+    background: linear-gradient(
+        180deg,
+        rgba(10, 10, 10, 0.3) 0%,
+        rgba(15, 15, 25, 0.6) 50%,
+        rgba(10, 10, 10, 0.3) 100%
+    );
+}
+
+
+/* ============================================
+   10.2.0 SECTION HEADING
+   ============================================ */
+
+/* 10.2.0 Heading wrapper - centered */
+.projects-heading-wrapper {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+/* 10.2.1 Main projects title */
+.projects-title {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    font-weight: 800;
+    letter-spacing: 6px;
+    text-transform: uppercase;
+    color: var(--text-primary);
+    position: relative;
+    display: inline-block;
+}
+
+/* 10.2.2 Decorative underline */
+.projects-underline {
+    width: 80px;
+    height: 4px;
+    margin: 1rem auto 0;
+    background: linear-gradient(90deg, var(--accent-glow), var(--secondary-glow), var(--primary-glow));
+    border-radius: 2px;
+    box-shadow: 0 0 10px var(--accent-glow), 0 0 20px rgba(255, 0, 110, 0.3);
+    animation: projectsUnderlinePulse 3s ease-in-out infinite;
+}
+
+/* 10.2.3 Underline glow animation */
+@keyframes projectsUnderlinePulse {
+    0%, 100% { 
+        box-shadow: 0 0 10px var(--accent-glow), 0 0 20px rgba(255, 0, 110, 0.3); 
+    }
+    50% { 
+        box-shadow: 0 0 20px var(--accent-glow), 0 0 40px rgba(255, 0, 110, 0.5), 0 0 60px rgba(255, 0, 110, 0.2); 
+    }
+}
+
+
+/* ============================================
+   10.3.0 2x2 PROJECTS GRID
+   ============================================ */
+
+/* 10.3.0 Grid container */
+.projects-grid {
+    display: grid;
+    /* 10.3.1 2 columns, equal width */
+    grid-template-columns: repeat(2, 1fr);
+    /* 10.3.2 Gap between cards */
+    gap: 2.5rem;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+
+/* ============================================
+   10.4.0 - 10.7.0 PROJECT CARD STYLES
+   (Shared across all 4 cards)
+   ============================================ */
+
+/* 10.4.1 Card container - sets 3D perspective */
+.project-card {
+    /* 10.4.1.1 Perspective creates depth for 3D flip */
+    perspective: 1200px;
+    /* 10.4.1.2 Fixed aspect ratio for consistent cards */
+    aspect-ratio: 4 / 5;
+    min-height: 380px;
+}
+
+/* 10.4.2 Card inner wrapper - enables 3D transforms */
+.card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    /* 10.4.2.1 CRITICAL: Enables 3D child transforms */
+    transform-style: preserve-3d;
+    transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+    /* 10.4.2.2 Prevents flickering during flip */
+    will-change: transform;
+}
+
+/* 10.4.3 Hover trigger - flips card 180 degrees */
+.project-card:hover .card-inner {
+    transform: rotateY(180deg);
+}
+
+/* 10.4.4 Card faces - shared front and back styles */
+.card-face {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* 10.4.4.1 CRITICAL: Hides back face during flip */
+    backface-visibility: hidden;
+    border-radius: 16px;
+    overflow: hidden;
+    /* 10.4.4.2 Glassmorphism base */
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    /* 10.4.4.3 Smooth border glow on hover */
+    transition: border-color 0.4s ease, box-shadow 0.4s ease;
+}
+
+/* 10.4.5 Front face styling */
+.card-front {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 2rem;
+    z-index: 2;
+}
+
+/* 10.4.6 Front face hover glow (before flip) */
+.project-card:hover .card-front {
+    border-color: rgba(0, 212, 255, 0.2);
+    box-shadow: 0 0 30px rgba(0, 212, 255, 0.1);
+}
+
+/* 10.4.7 Back face styling */
+.card-back {
+    /* 10.4.7.1 CRITICAL: Back face starts rotated 180 degrees */
+    transform: rotateY(180deg);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    /* 10.4.7.2 Different accent color for back */
+    background: rgba(123, 44, 191, 0.08);
+    border: 1px solid rgba(123, 44, 191, 0.2);
+}
+
+/* 10.4.8 Back face hover glow */
+.project-card:hover .card-back {
+    border-color: rgba(123, 44, 191, 0.4);
+    box-shadow: 
+        0 0 30px rgba(123, 44, 191, 0.15),
+        inset 0 0 30px rgba(123, 44, 191, 0.05);
+}
+
+
+/* ============================================
+   10.4.3 FRONT FACE COMPONENTS
+   ============================================ */
+
+/* 10.4.3.1 Preview cover box */
+.card-cover {
+    position: relative;
+    width: 100%;
+    height: 160px;
+    border-radius: 12px;
+    background: linear-gradient(135deg, rgba(0, 212, 255, 0.1), rgba(123, 44, 191, 0.1));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+    overflow: hidden;
+}
+
+/* 10.4.3.2 Cover icon */
+.cover-icon {
+    font-size: 4rem;
+    z-index: 2;
+    filter: drop-shadow(0 0 10px rgba(0, 212, 255, 0.5));
+    transition: transform 0.4s ease;
+}
+
+/* 10.4.3.3 Icon bounce on hover */
+.project-card:hover .cover-icon {
+    transform: scale(1.2) rotate(5deg);
+}
+
+/* 10.4.3.4 Decorative gradient overlay */
+.cover-gradient {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        135deg,
+        rgba(0, 212, 255, 0.1) 0%,
+        rgba(123, 44, 191, 0.15) 50%,
+        rgba(255, 0, 110, 0.1) 100%
+    );
+    opacity: 0.6;
+}
+
+/* 10.4.3.5 Project title */
+.card-title {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    text-align: center;
+    margin-bottom: 0.6rem;
+    line-height: 1.3;
+}
+
+/* 10.4.3.6 Status badge */
+.card-status {
+    display: inline-block;
+    padding: 0.3rem 0.9rem;
+    background: rgba(255, 0, 110, 0.15);
+    color: var(--accent-glow);
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border-radius: 20px;
+    border: 1px solid rgba(255, 0, 110, 0.3);
+    margin-bottom: 1rem;
+    box-shadow: 0 0 10px rgba(255, 0, 110, 0.2);
+}
+
+/* 10.4.3.7 Tech tags container */
+.card-tags {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-top: auto;
+}
+
+/* 10.4.3.8 Individual tag */
+.tag {
+    padding: 0.3rem 0.8rem;
+    background: rgba(0, 212, 255, 0.1);
+    color: var(--primary-glow);
+    font-size: 0.75rem;
+    font-weight: 500;
+    border-radius: 6px;
+    border: 1px solid rgba(0, 212, 255, 0.2);
+    transition: all 0.3s ease;
+}
+
+/* 10.4.3.9 Tag hover glow */
+.tag:hover {
+    background: rgba(0, 212, 255, 0.2);
+    box-shadow: 0 0 10px rgba(0, 212, 255, 0.3);
+    transform: translateY(-2px);
+}
+
+
+/* ============================================
+   10.4.4 BACK FACE COMPONENTS
+   ============================================ */
+
+/* 10.4.4.1 Back content wrapper */
+.back-content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    overflow-y: auto;
+}
+
+/* 10.4.4.2 Back title */
+.back-title {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 0.8rem;
+    text-shadow: 0 0 10px rgba(123, 44, 191, 0.5);
+}
+
+/* 10.4.4.3 Back description */
+.back-desc {
+    font-size: 0.85rem;
+    line-height: 1.6;
+    color: var(--text-muted);
+    margin-bottom: 1.2rem;
+    text-align: center;
+}
+
+/* 10.4.4.4 Tech specs container */
+.tech-specs {
+    width: 100%;
+    margin-bottom: 1.2rem;
+}
+
+/* 10.4.4.5 Specs heading */
+.specs-heading {
+    font-size: 0.8rem;
+    color: var(--secondary-glow);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 0.6rem;
+    font-weight: 600;
+}
+
+/* 10.4.4.6 Specs list */
+.specs-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+}
+
+/* 10.4.4.7 Individual spec item */
+.specs-list li {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    padding: 0.2rem 0;
+    position: relative;
+    padding-left: 1rem;
+}
+
+/* 10.4.4.8 Spec bullet */
+.specs-list li::before {
+    content: '▸';
+    position: absolute;
+    left: 0;
+    color: var(--secondary-glow);
+    font-size: 0.7rem;
+}
+
+/* 10.4.4.9 Back links container */
+.back-links {
+    display: flex;
+    gap: 0.8rem;
+    margin-top: auto;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* 10.4.4.10 Individual back link */
+.back-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.6rem 1.2rem;
+    text-decoration: none;
+    font-size: 0.8rem;
+    font-weight: 600;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    border: 1px solid transparent;
+}
+
+/* 10.4.4.11 Demo link styling */
+.link-demo {
+    background: rgba(0, 212, 255, 0.15);
+    color: var(--primary-glow);
+    border-color: rgba(0, 212, 255, 0.3);
+}
+
+.link-demo:hover {
+    background: rgba(0, 212, 255, 0.3);
+    box-shadow: 0 0 15px rgba(0, 212, 255, 0.4);
+    transform: translateY(-2px);
+}
+
+/* 10.4.4.12 Repository link styling */
+.link-repo {
+    background: rgba(123, 44, 191, 0.15);
+    color: var(--secondary-glow);
+    border-color: rgba(123, 44, 191, 0.3);
+}
+
+.link-repo:hover {
+    background: rgba(123, 44, 191, 0.3);
+    box-shadow: 0 0 15px rgba(123, 44, 191, 0.4);
+    transform: translateY(-2px);
+}
+
+
+/* ============================================
+   11.0.0 PROJECTS RESPONSIVE STYLES
+   ============================================ */
+
+/* 11.1.0 Tablet adjustments (768px - 1024px) */
+@media screen and (max-width: 1024px) {
+    
+    /* 11.1.1 Reduce grid gap */
+    .projects-grid {
+        gap: 1.8rem;
+        max-width: 900px;
+    }
+    
+    /* 11.1.2 Smaller card padding */
+    .card-front, .card-back {
+        padding: 1.5rem;
+    }
+    
+    /* 11.1.3 Compact cover */
+    .card-cover {
+        height: 130px;
+    }
+    
+    .cover-icon {
+        font-size: 3rem;
+    }
+    
+    /* 11.1.4 Smaller title */
+    .card-title {
+        font-size: 1.1rem;
+    }
+}
+
+/* 11.2.0 Mobile adjustments (below 768px) */
+@media screen and (max-width: 768px) {
+    
+    /* 11.2.1 Single column on mobile */
+    .projects-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        max-width: 400px;
+    }
+    
+    /* 11.2.2 Taller cards for mobile */
+    .project-card {
+        aspect-ratio: 3 / 4;
+        min-height: 420px;
+    }
+    
+    /* 11.2.3 Comfortable padding */
+    .card-front, .card-back {
+        padding: 2rem;
+    }
+    
+    /* 11.2.4 Larger cover for mobile */
+    .card-cover {
+        height: 150px;
+    }
+    
+    .cover-icon {
+        font-size: 3.5rem;
+    }
+    
+    /* 11.2.5 Larger text for readability */
+    .card-title {
+        font-size: 1.4rem;
+    }
+    
+    .back-title {
+        font-size: 1.3rem;
+    }
+    
+    .back-desc {
+        font-size: 0.95rem;
+    }
+    
+    .specs-list li {
+        font-size: 0.9rem;
+    }
+    
+    /* 11.2.6 Larger links */
+    .back-link {
+        padding: 0.7rem 1.5rem;
+        font-size: 0.9rem;
+    }
+}
+
+/* 11.3.0 Small mobile adjustments (below 480px) */
+@media screen and (max-width: 480px) {
+    
+    /* 11.3.1 Tighter section padding */
+    .projects-section {
+        padding: 80px 4% 60px;
+    }
+    
+    /* 11.3.2 Compact cards */
+    .project-card {
+        min-height: 380px;
+    }
+    
+    .card-front, .card-back {
+        padding: 1.5rem;
+    }
+    
+    /* 11.3.3 Smaller cover */
+    .card-cover {
+        height: 120px;
+    }
+    
+    .cover-icon {
+        font-size: 3rem;
+    }
+    
+    /* 11.3.4 Compact text */
+    .card-title {
+        font-size: 1.1rem;
+    }
+    
+    .back-title {
+        font-size: 1.1rem;
+    }
+    
+    .back-desc {
+        font-size: 0.8rem;
+    }
+    
+    /* 11.3.5 Stack links vertically */
+    .back-links {
+        flex-direction: column;
+        width: 100%;
+    }
+    
+    .back-link {
+        width: 100%;
+        justify-content: center;
+    }
+}

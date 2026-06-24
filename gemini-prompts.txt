@@ -6,7 +6,6 @@ i want to also include that i will like the entire background to be dark ,althou
 
 NAVIGATION
 build me a modern navigation bar,
-Set up a glassmorphism design (frosted glass background effect).
 on the left create an image logo(let this logo be a proffessional logo coined from the word"GACE")
 on the right add interactive navigation links:
 (Home, About, Projects, Contact).

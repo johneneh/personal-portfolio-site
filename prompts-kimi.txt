@@ -1,0 +1,45 @@
+Hello kimi, I want to develop a proffesional portfolio website with a cinematic background  I am a new software developer and i want to build my personal professional portfolio website so i would want you to act as a software developer and help me build the website with only html and vanilla css and i will be using VS Code. Also, include comments at sections of the codes and number them so that i can create a structured dewey numbering system from the sections and subsections of the page and also make the comments understandable so that i can be able to read through them and vibe engineer where necessary
+ i want you to be proffesional and give the best you have, 
+ i want it to be responsive for mobile ,ipad and laptops
+i will  give you the prompts section by section so we can build along. I will give you the prompts for :navigation bar ,hero,about me ,projects and contacts  do you understand?
+
+
+Navigation: Build me a modern navigation bar, on the left add a  placeholder where i can put my logo,on the right add interactive navigation links: (Home, About, Projects, Contact). Include pure CSS active focus and hover glow micro-animations for all elements. make this navigation section to be sticky for the page Create a cinematic animated starfield background using only HTML and vanilla CSS
+craete the html and css codes seprately and make them copiable
+
+
+HERO let this section be on a 3-row grid layout. Let the first row hold my image(leave a link pointing to images for this)let the second row hold an introduction headline bearing my name JOHN ENEH (apply gradient text),add a subheading bearing quick-glance progress bar blocks showcasing technical skill sets:(Frontend, Fullstack Core, AI Prompts, Vibe Coding Architecture,vibe Engineering).
+let the third column have a dynamic "View My Resume" button, then below the button showcase an advanced 3D-looking element animation built entirely in CSS.Ensure all layout components wrap tightly with no text truncation.
+
+
+ABOUT Me
+let this section have  an introductory heading which says "ABOUT ME" centered very well
+immediately after the introductory heading
+add a typewriter effect that displays some titles about me 
+ build  a  2-column grid layout with a background color that will blend with the general background color
+let the left column bear my profile picture Add a smooth  CSS hover-transform scale effect that zooms the image  when hovered
+let the right column  display a structured professional biography.
+
+
+
+Projects
+let this section have  an introductory heading which says "PROJECTS" centered very well
+immediately after the introductory heading let it have  a 2column by 2row grids bearing project car
+that i intend building neatly crafted(inside each of the cards the heading will come first followed
+heading and details to identify them for you)  the projects are:
+heading-"a clinic management system website(upcoming)" details-''a comprehensive health care platfo
+patient registeration and automated appointment''
+heading-''exclusive student social hub(upcoming)'' details-''a social platform restricted to univer
+student-led study group, campus wide event ''
+heading-''specialized labor connection app(upcoming)''  details-''a proffesional networking app con
+labourers and local contractors and clients'' 
+heading-''travel agency hub(upcoming)'' details-''a dynamic booking engine for dynamic travel packa
+integrated search filters for destination''
+Each card must use CSS `transform-style: preserve-3d` to enable 3D effects.
+When a user hovers over a project card, it must realistically flip 180 degrees in 3D space.
+The front of the card displays a preview cover box, a project title, and tags.
+The back of the card reveals hidden overlay tech specs, live demo links, and repository code link
+
+
+kimi you are doing excellently well,you are a genius!
+
