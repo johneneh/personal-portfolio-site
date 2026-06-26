@@ -730,7 +730,7 @@ html {
   display: flex;
   flex-wrap: wrap; /* 6.4.3.1 Wrap to prevent truncation */
   justify-content: center;
-  gap: 1rem;
+  gap: 2rem;
   width: 100%;
   max-width: 800px;
   padding: 0.5rem;
@@ -1179,7 +1179,7 @@ html {
   .skills-container {
     flex-direction: column;
     align-items: center;
-    gap: 0.8rem;
+    gap: 0.1rem;
   }
 
   .skill-block {
@@ -1406,13 +1406,13 @@ html {
     display: grid;
     grid-template-columns: 1fr 1fr; /* 8.4.1 Equal 2-column split */
     gap: 4rem; /* 8.4.2 Generous gap between columns */
-    align-items: center;
+    align-items: start;
     max-width: 1200px;
     margin: 0 auto;
 }
 
 
-/* ============================================
+ /* ============================================
    8.5.0 LEFT COLUMN: PROFILE IMAGE
    ============================================ */
 
@@ -1577,8 +1577,8 @@ html {
 .bio-stats {
     display: flex;
     justify-content: space-between;
-    gap: 1rem;
-    padding-top: 1.5rem;
+    gap: 0.5rem;
+    padding-top: 1rem;
     border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
@@ -1619,6 +1619,7 @@ html {
     
     /* 9.1.1 Reduce grid gap */
     .about-grid {
+        grid-template-columns: 1fr; /* 9.2.1.1 Single column on mobile */
         gap: 2.5rem;
     }
     
