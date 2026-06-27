@@ -1,2 +1,199 @@
+DEWEY CLASSIFICATION INDEX
 
+
+1.0 = Meta & Setup
+
+   1.0.0 = Meta & Setup
+      1.0.0.1 = Favicon with Cache Buster
+
+
+2.0 = Cinematic Starfield Background
+
+   2.1 = Starfield Container
+   2.1.1 = Individual Star Layers for Parallax Depth
+
+================================================================================
+3.0 = Navigation Bar
+================================================================================
+   3.1 = Sticky Navigation Container
+      3.1.1 = Logo Placeholder Section
+         3.1.1.1 = Replace src with Actual Logo Image
+      3.1.2 = Navigation Links Container
+         3.1.2.1 = Home Link with Glow Effects
+         3.1.2.2 = About Link with Glow Effects
+         3.1.2.3 = Projects Link with Glow Effects
+         3.1.2.4 = Contact Link with Glow Effects
+      3.1.3 = Mobile Hamburger Menu Toggle
+
+================================================================================
+5.0 = Hero Section
+================================================================================
+   5.1 = Hero Container — Full Viewport Height
+   5.2 = 3-Row Grid Layout
+
+   5.3 = Row 1: Profile Image
+      5.3.1 = Profile Image Container with Glow Ring
+         5.3.1.2 = Decorative Orbit Ring Around Image
+
+   5.4 = Row 2: Introduction & Skills
+      5.4.1 = Main Headline with Gradient Text
+      5.4.2 = Subheading / Tagline
+      5.4.3 = Technical Skills Progress Bars
+         5.4.3.1 = Frontend Skill Block
+         5.4.3.2 = Fullstack Core Skill Block
+         5.4.3.3 = AI Prompts Skill Block
+         5.4.3.4 = Vibe Coding Architecture Skill Block
+         5.4.3.5 = Vibe Engineering Skill Block
+
+   5.5 = Row 3: CTA Button & 3D Element
+      5.5.1 = Dynamic Resume Button
+         5.5.1.1 = Button Glow Effect Layers
+      5.5.2 = Advanced 3D CSS Element Animation
+         5.5.2.1 = 3D Cube Structure
+         5.5.2.2 = Floating Particles Around Cube
+
+================================================================================
+6.0 = About Me Section
+================================================================================
+   6.1 = About Section Container
+   6.2 = Section Heading Wrapper
+      6.2.1 = Main Section Title
+      6.2.2 = Decorative Underline Accent
+
+   6.3 = Typewriter Effect Container
+      6.3.1 = Static Prefix Text
+      6.3.2 = Animated Typewriter Text
+      6.3.3 = Blinking Cursor
+
+   6.4 = 2-Column Grid Layout
+
+   6.5 = Left Column: Profile Image
+      6.5.1 = Image Wrapper with Hover Effects
+         6.5.1.2 = Decorative Corner Accents
+
+   6.6 = Right Column: Professional Biography
+      6.6.1 = Biography Card Container
+      6.6.2 = Bio Greeting
+      6.6.3 = Bio Paragraphs
+      6.6.4 = Bio Stats Row
+         6.6.4.1 = Stat Item (Years Experience)
+         6.6.4.2 = Stat Item (Projects Completed)
+         6.6.4.3 = Stat Item (Happy Clients)
+
+================================================================================
+7.0 = Projects Section
+================================================================================
+   7.1 = Projects Section Container
+   7.2 = Section Heading Wrapper
+      7.2.1 = Main Section Title
+      7.2.2 = Decorative Underline Accent
+
+   7.3 = 2x2 Project Cards Grid
+
+   7.4 = Project Card 1: Clinic Management System
+      7.4.1 = Card Container with 3D Flip Context
+      7.4.2 = Inner Wrapper — Holds Front and Back Faces
+      7.4.3 = Front Face
+         7.4.3.1 = Preview Cover Box with Icon
+         7.4.3.2 = Decorative Gradient Overlay
+         7.4.3.3 = Project Title
+         7.4.3.4 = Status Badge
+         7.4.3.5 = Tech Tags
+      7.4.4 = Back Face
+         7.4.4.1 = Back Content Wrapper
+         7.4.4.2 = Project Heading
+         7.4.4.3 = Project Description
+         7.4.4.4 = Tech Specs List
+         7.4.4.5 = Action Links
+
+   7.5 = Project Card 2: Student Social Hub
+   7.6 = Project Card 3: Labor Connection App
+   7.7 = Project Card 4: Travel Agency Hub
+
+================================================================================
+8.0 = Contact Section
+================================================================================
+   8.1 = Contact Section Container
+   8.2 = Section Heading Wrapper
+      8.2.1 = Main Section Title
+      8.2.2 = Decorative Underline Accent
+
+   8.3 = Professional Outreach Message
+
+   8.4 = Two-Column Grid: Form + Socials
+
+   8.5 = Left Column: Contact Form
+      8.5.1 = Form Container
+      8.5.2 = Name Input Group
+      8.5.3 = Email Input Group
+      8.5.4 = Message Textarea Group
+      8.5.5 = Submit Button
+         8.5.5.1 = Button Glow Layer
+
+   8.6 = Right Column: Social Media Links
+      8.6.1 = Social Links Container
+      8.6.2 = Social Section Heading
+      8.6.3 = Social Links Grid
+         8.6.3.1 = LinkedIn Link
+         8.6.3.2 = GitHub Link
+         8.6.3.3 = Twitter Link
+         8.6.3.4 = Instagram Link
+      8.6.4 = Decorative Email CTA
+
+================================================================================
+9.0 = Footer Section
+================================================================================
+   9.1 = Sticky Footer Container
+   9.2 = Footer Inner Wrapper
+
+   9.3 = Copyright Notice
+      9.3.1 = Copyright Symbol + Name + Year
+
+   9.4 = Social Media Icons
+      9.4.1 = LinkedIn Icon Link
+      9.4.2 = GitHub Icon Link
+      9.4.3 = Twitter Icon Link
+      9.4.4 = Instagram Icon Link
+
+================================================================================
+10.0 = Scroll to Top Button
+================================================================================
+   10.1 = Scroll to Top Button Container
+      10.1.1 = Up Arrow Icon
+      10.1.2 = Glow Ring Effect
+
+================================================================================
+11.0 = Scripts
+================================================================================
+   11.1 = Mobile Navigation Toggle
+      11.1.1 = Active Link State on Click
+      11.1.2 = Close Mobile Menu on Link Click
+
+   11.2 = Typewriter Effect for About Section
+      11.2.1 = Array of Titles to Type Out
+      11.2.2 = Typewriter State Variables
+      11.2.3 = Main Typewriter Function
+      11.2.4 = Start on DOMContentLoaded
+
+   11.3 = Scroll to Top Button Logic
+      11.3.1 = Get Scroll Button Element
+      11.3.2 = Scroll Event Listener — Show/Hide Button
+         11.3.2.1 = Show Button After Scrolling 400px Down
+      11.3.3 = Click Event — Smooth Scroll to Top
+         11.3.3.1 = Smooth Scroll Behavior
+
+================================================================================
+QUICK REFERENCE MAP
+================================================================================
+1.0   = Meta & Favicon
+2.0   = Starfield Background
+3.0   = Navigation Bar
+4.0   = Main Content
+5.0   = Hero Section
+6.0   = About Me Section
+7.0   = Projects Section
+8.0   = Contact Section
+9.0   = Footer Section
+10.0  = Scroll to Top Button
+11.0  = JavaScript Logic
 
